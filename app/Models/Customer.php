@@ -13,6 +13,7 @@ class Customer extends Model
     //therefore it's a one to many relationship . 
     public function invoices()
     {
+        //this is to say that the customer model is going is allowed to have many invoices .
         return $this->hasMany(Invoice::class);
     }
 }

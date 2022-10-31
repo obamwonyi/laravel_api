@@ -12,6 +12,7 @@ class Invoice extends Model
     //an invoice belongs to one customer . 
     public function customer() 
     {
+        //an invoice can only have one customer 
         return $this->belongsTo(Customer::class);
     }
 }
