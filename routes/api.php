@@ -26,7 +26,9 @@ Route::group(
     ['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\V1' ],
     function()
     {
+        //passes the return value  of the index method in our CustomerController class
         Route::apiResource('customers',CustomerController::class);
+        //passes the return value of the index method in our InvoiceController
         Route::apiResource('invoices',InvoiceController::class);
     }
 );
